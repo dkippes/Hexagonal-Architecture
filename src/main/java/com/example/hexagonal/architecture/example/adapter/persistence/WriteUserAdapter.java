@@ -1,13 +1,11 @@
 package com.example.hexagonal.architecture.example.adapter.persistence;
 
+import com.example.hexagonal.architecture.example.adapter.persistence.mappers.UserJpaMapper;
 import com.example.hexagonal.architecture.example.adapter.persistence.models.UserData;
-import com.example.hexagonal.architecture.example.application.port.persistence.ReadUserPort;
-import com.example.hexagonal.architecture.example.application.port.persistence.WriteUserPort;
+import com.example.hexagonal.architecture.example.adapter.persistence.repositories.UserRepository;
+import com.example.hexagonal.architecture.example.application.ports.persistence.WriteUserPort;
 import com.example.hexagonal.architecture.example.domain.User;
 import org.springframework.stereotype.Component;
-
-import java.util.List;
-import java.util.stream.Collectors;
 
 @Component
 public class WriteUserAdapter implements WriteUserPort {

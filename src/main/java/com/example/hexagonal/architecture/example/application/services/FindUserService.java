@@ -1,7 +1,7 @@
 package com.example.hexagonal.architecture.example.application.services;
 
-import com.example.hexagonal.architecture.example.application.port.persistence.ReadUserPort;
-import com.example.hexagonal.architecture.example.application.usercase.FindAllUsersUseCase;
+import com.example.hexagonal.architecture.example.application.ports.persistence.ReadUserPort;
+import com.example.hexagonal.architecture.example.application.usercases.FindAllUsersUseCase;
 import com.example.hexagonal.architecture.example.domain.User;
 import org.springframework.stereotype.Service;
 

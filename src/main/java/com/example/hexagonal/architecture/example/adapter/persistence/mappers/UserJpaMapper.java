@@ -1,12 +1,13 @@
-package com.example.hexagonal.architecture.example.adapter.persistence;
+package com.example.hexagonal.architecture.example.adapter.persistence.mappers;
 
 import com.example.hexagonal.architecture.example.adapter.persistence.models.UserData;
 import com.example.hexagonal.architecture.example.domain.User;
+import com.example.hexagonal.architecture.example.infrastructure.anotations.Mapper;
 import org.springframework.stereotype.Component;
 
-@Component
+@Mapper
 public class UserJpaMapper {
-    User toDomain(UserData userData) {
+    public User toDomain(UserData userData) {
         return User.builder()
                 .id(userData.getId())
                 .name(userData.getName())

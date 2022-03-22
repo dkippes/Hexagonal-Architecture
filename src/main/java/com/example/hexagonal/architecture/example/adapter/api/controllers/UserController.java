@@ -1,5 +1,7 @@
-package com.example.hexagonal.architecture.example.adapter.api;
+package com.example.hexagonal.architecture.example.adapter.api.controllers;
 
+import com.example.hexagonal.architecture.example.adapter.api.ChangeUserEndpointAdapter;
+import com.example.hexagonal.architecture.example.adapter.api.FindUserEndpointAdapter;
 import com.example.hexagonal.architecture.example.adapter.api.model.SaveUserBodyDto;
 import com.example.hexagonal.architecture.example.adapter.api.model.UserDto;
 import org.springframework.beans.factory.annotation.Autowired;

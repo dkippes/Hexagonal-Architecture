@@ -1,8 +1,6 @@
-package com.example.hexagonal.architecture.example.application.port.persistence;
+package com.example.hexagonal.architecture.example.application.ports.persistence;
 
 import com.example.hexagonal.architecture.example.domain.User;
-
-import java.util.List;
 
 public interface WriteUserPort {
     User saveNew(User user);

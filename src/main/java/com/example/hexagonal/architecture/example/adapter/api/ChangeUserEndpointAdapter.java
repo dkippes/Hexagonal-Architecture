@@ -1,13 +1,14 @@
 package com.example.hexagonal.architecture.example.adapter.api;
 
+import com.example.hexagonal.architecture.example.adapter.api.mappers.UserDtoMapper;
 import com.example.hexagonal.architecture.example.adapter.api.model.SaveUserBodyDto;
 import com.example.hexagonal.architecture.example.adapter.api.model.UserDto;
-import com.example.hexagonal.architecture.example.application.port.api.ChangeUserEndpointPort;
-import com.example.hexagonal.architecture.example.application.usercase.SubmitNewUserUseCase;
+import com.example.hexagonal.architecture.example.application.ports.api.ChangeUserEndpointPort;
+import com.example.hexagonal.architecture.example.application.usercases.SubmitNewUserUseCase;
 import com.example.hexagonal.architecture.example.domain.User;
-import org.springframework.stereotype.Component;
+import com.example.hexagonal.architecture.example.infrastructure.anotations.Adapter;
 
-@Component
+@Adapter
 public class ChangeUserEndpointAdapter implements ChangeUserEndpointPort {
 
     private final SubmitNewUserUseCase submitNewUserUseCase;

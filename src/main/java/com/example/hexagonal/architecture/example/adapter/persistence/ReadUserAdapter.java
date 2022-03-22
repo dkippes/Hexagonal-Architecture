@@ -1,6 +1,8 @@
 package com.example.hexagonal.architecture.example.adapter.persistence;
 
-import com.example.hexagonal.architecture.example.application.port.persistence.ReadUserPort;
+import com.example.hexagonal.architecture.example.adapter.persistence.mappers.UserJpaMapper;
+import com.example.hexagonal.architecture.example.adapter.persistence.repositories.UserRepository;
+import com.example.hexagonal.architecture.example.application.ports.persistence.ReadUserPort;
 import com.example.hexagonal.architecture.example.domain.User;
 import org.springframework.stereotype.Component;
 
@@ -10,7 +12,6 @@ import java.util.stream.Collectors;
 @Component
 public class ReadUserAdapter implements ReadUserPort {
     private final UserRepository userRepository;
-
     private final UserJpaMapper userJpaMapper;
 
     public ReadUserAdapter(UserRepository userRepository, UserJpaMapper userJpaMapper) {

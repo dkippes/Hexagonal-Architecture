@@ -1,20 +1,21 @@
-package com.example.hexagonal.architecture.example.adapter.api;
+package com.example.hexagonal.architecture.example.adapter.api.mappers;
 
 import com.example.hexagonal.architecture.example.adapter.api.model.SaveUserBodyDto;
 import com.example.hexagonal.architecture.example.adapter.api.model.UserDto;
 import com.example.hexagonal.architecture.example.domain.User;
-import org.springframework.stereotype.Component;
+import com.example.hexagonal.architecture.example.infrastructure.anotations.Mapper;
 
-@Component
+@Mapper
 public class UserDtoMapper {
-    UserDto toDto(User user) {
+    public UserDto toDto(User user) {
         return UserDto.builder()
+                .id(user.getId())
                 .name(user.getName())
                 .email(user.getEmail())
                 .build();
     }
 
-    User toDomainFromSaveBody(SaveUserBodyDto saveUserBodyDto) {
+    public User toDomainFromSaveBody(SaveUserBodyDto saveUserBodyDto) {
         return User.builder()
                 .name(saveUserBodyDto.getName())
                 .email(saveUserBodyDto.getEmail())
